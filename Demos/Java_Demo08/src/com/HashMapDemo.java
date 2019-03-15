@@ -5,7 +5,6 @@ import java.util.Map.Entry;
 import lombok.*;
 
 public class HashMapDemo {
-
 	public static void main(String[] args) {
 		Map<Integer, String> map = new HashMap<>();
 		map.put(1, "apple");
@@ -33,7 +32,6 @@ public class HashMapDemo {
 			System.out.println(e.getValue());
 		}
 	}
-
 }
 
 @ToString
