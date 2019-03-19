@@ -1,5 +1,7 @@
 package com.java;
 
+import java.util.function.Predicate;
+
 public class InterfaceDemo3 {
 
 	public static void main(String[] args) {
@@ -23,6 +25,12 @@ public class InterfaceDemo3 {
 		};
 
 		System.out.printf("\nThe largest number of {200, 100, 150}: ", i6.findLargest(200, 100, 150));
+
+		Predicate<Integer> p = t -> t % 2 == 0;
+
+		System.out.printf("\n43 is a even: %b", p.test(43));
+		
+		
 
 	}
 
