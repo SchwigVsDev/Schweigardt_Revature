@@ -1,4 +1,4 @@
-package common;
+package com.java;
 
 public class Client {
 
