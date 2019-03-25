@@ -1,0 +1,58 @@
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.Properties;
+
+public class TestMain {
+	static String url, username, password;
+	static {
+		try {
+			Properties property = new Properties();
+			property.load(new FileReader("C:\\Users\\David\\eclipse-workspace\\TestProject\\src\\main\\resources\\database.properties"));
+			// test to make sure that the file path was correct and it's able to read the 'driver' field in the resource file
+//			System.out.println(property.getProperty("driver"));
+			Class.forName(property.getProperty("driver"));
+			url = property.getProperty("url");
+			username = property.getProperty("username");
+			password = property.getProperty("password");
+		} catch (ClassNotFoundException e) {
+			System.out.println("Cannot find your driver class.");
+		} catch (IOException e) {
+			System.out.println("Cannot find your property file.");
+		}
+	}
+
+	public static void main(String[] args) throws FileNotFoundException, IOException, ClassNotFoundException, SQLException {
+		selectRecords(url, username, password); // returns rows from the DB: executeQuery: ResultSet
+		insertRecord();
+	}
+
+	private static void selectRecords(String url, String username, String password) throws SQLException {
+		Connection connection = DriverManager.getConnection(url, username, password);
+		Statement st = connection.createStatement();
+		ResultSet result = st.executeQuery("select * from product"); // select statement
+		while (result.next()) { // gives you the next row
+			int productID = result.getInt("product_id"); // specify column name or number // retrieves column value for
+															// product_id
+			String name = result.getString(2); // get value for 2nd column
+			System.out.println(productID);
+			System.out.println(name);
+		}
+		System.out.println(connection);
+		connection.close(); // be sure to include this after your code ends so that you disconnect from the DB
+	}
+	
+	private static void insertRecord() throws SQLException {
+		Connection con = DriverManager.getConnection(url, username, password);
+		Statement st = con.createStatement();
+		int rowCount = st.executeUpdate("Insert into product (product_id, name) values (20, 'duster')");
+//		con.commit(); // not necessary in this context as commit is automatic
+		con.close();
+		System.out.println(rowCount);
+	}
+}

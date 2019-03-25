@@ -1,0 +1,16 @@
+package classroom.activity;
+
+public class EnumDemo {
+	
+	Weekdays day;
+	
+	public static void main(String[] args) {
+		EnumDemo obj = new EnumDemo();
+		obj.day = Weekdays.Sunday; // works
+//		obj.day = Weekdays.somethingElse // error
+	}
+}
+
+enum Weekdays { // restricts the accepted arguments for Weekdays
+	Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday;
+}
