@@ -3,8 +3,16 @@
 * {
 	background-color: lightgray;
 	color: darkblue;
-	padding: 1%;
-	border: solid;
+}
+
+#id1 {
+	background-color: gray;
+	color: lightblue;
+}
+
+#id2 {
+	background-color: purple;
+	color: gold;
 }
 
 body {
@@ -14,15 +22,17 @@ body {
 
 h1 {
 	width: 7%;
-	left: 15px;
 }
 
 table {
 	width: 25%;
 }
 
-#Links {
-	width: 15%;
+nav {
 	height: 10%;
-	left: 15%;
+}
+
+nav a {
+	display: inline-block;
+	background-color: white;
 }
