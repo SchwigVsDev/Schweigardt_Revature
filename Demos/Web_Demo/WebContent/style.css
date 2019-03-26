@@ -1,0 +1,28 @@
+@charset "ISO-8859-1";
+
+* {
+	background-color: lightgray;
+	color: darkblue;
+	padding: 1%;
+	border: solid;
+}
+
+body {
+	padding: 0;
+	border: none;
+}
+
+h1 {
+	width: 7%;
+	left: 15px;
+}
+
+table {
+	width: 25%;
+}
+
+#Links {
+	width: 15%;
+	height: 10%;
+	left: 15%;
+}

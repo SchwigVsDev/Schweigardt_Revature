@@ -1,0 +1,256 @@
+anonymous block: without a name
+Not saved anywhere in the db
+
+
+declare
+a number(4):= 2456;
+begin
+dbms_output.put_line('hello world'|| A);
+end;
+/
+
+hello world2456
+
+Variables are case insensitive
+
+begin
+dbms_output.put_line('hello');
+end;
+/
+
+declare
+v_var1 number;
+begin
+v_var1 :=1;
+	declare
+	v_var2 number;
+	begin
+	v_var1 := v_var2;
+	end;
+dbms_output.put_line( v_var1 || v_var2);
+end;
+
+
+declare
+v_var1 number := &x ;
+begin
+if v_var1 <100 then
+dbms_output.put_line('less than 100');
+elsif v_var1 = 100 then
+dbms_output.put_line('equal to 100');
+else
+dbms_output.put_line('greater than 100');
+end if;
+dbms_output.put_line( v_var1 || v_var2);
+end;
+/
+
+
+declare
+v_var1 number := &x ;
+begin
+case v_var1 
+when 80 then
+dbms_output.put_line('less than 100');
+when 100 then
+dbms_output.put_line('equal to 100');
+else
+dbms_output.put_line('unknown input');
+end case
+end;
+/
+
+
+set serveroutput on;
+
+declare
+v_var1 number := &x ;
+v_output varchar2(100);
+begin
+v_output := case v_var1 
+when 80 then 'less than 100'
+when 100 then 'equal to 100'
+else 'unknown input'
+end;
+dbms_output.put_line(v_output);
+end;
+/
+
+
+Loops
+
+loop
+----
+end loop;
+
+set serveroutput on;
+
+declare
+v_count number := 1;
+begin
+loop
+dbms_output.put_line('hello');
+v_count := v_count +1;
+exit when  v_count > 10;
+end loop;
+end;
+/
+
+
+declare
+v_count number := 1;
+begin
+loop
+dbms_output.put_line('hello');
+v_count := v_count +1;
+if  v_count > 10 then exit;
+end if;
+end loop;
+end;
+/
+
+declare
+v_count1 number := 1;
+v_count2 number := 1;
+begin
+<<outer>>
+loop
+<<innerl>>
+loop
+dbms_output.put_line(v_count2);
+v_count2 := v_count2 +1;
+if  v_count2 > 10 then exit;
+end if;
+end loop outer;
+dbms_output.put_line(v_count1);
+v_count1 := v_count1 +1;
+if  v_count1 > 10 then exit;
+end if;
+end loop;
+end;
+/
+
+
+
+declare
+x number := 0;
+begin
+loop  --after continue;
+x := x+1;
+if x< 3 then
+continue;
+end if;
+dbms_output.put_line(x);
+exit when x= 5;
+end loop;
+end;
+/
+
+
+
+declare
+x number := 0;
+begin
+loop  --after continue;
+x := x+1;
+continue when x<3;
+dbms_output.put_line(x);
+exit when x= 5;
+end loop;
+end;
+/
+
+
+
+for(int i=0; i<2; i++){
+if (i<1)
+continue;
+Sysout(i);
+}
+
+
+begin
+for x in 1..10 loop
+dbms_output.put_line(x);
+end loop;
+end;
+/
+
+
+begin
+for x in reverse 1..10 loop
+dbms_output.put_line(x);
+--x := x+1; This is a runtime error
+end loop;
+end;
+/
+
+
+declare
+x number := 1;
+begin
+while x<= 5
+loop
+dbms_output.put_line(x);
+x := x+1;
+end loop;
+end;
+/
+
+
+
+create or replace procedure p1( x out number)
+is
+begin
+x := 32;
+end p1;
+/
+
+exec p1(:x);
+
+declare
+x number ;
+begin
+p1(x);
+dbms_output.put_line(x);
+end;
+/
+
+
+declare
+name employee.ename%type;
+begin
+select ename into name from employee ;
+dbms_output.put_line(name);
+exception
+when NO_DATA_FOUND THEN
+dbms_output.put_line('nO ROW returned');
+WHEN TOO_MANY_ROWS THEN
+dbms_output.put_line('Too many rows returned');
+when OTHERS then
+dbms_output.put_line('uNABLE TO FETCH DATA');
+end;
+/
+
+
+Employee table : dept is not yet allocated
+
+delete them
+
+emp: empid, name , dept_id    dept: dept_id, dept_name 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

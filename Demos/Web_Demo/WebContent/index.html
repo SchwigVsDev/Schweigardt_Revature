@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<link rel="stylesheet" type="text/css" href="style.css">
+<title>WebContent Index</title>
+</head>
+<body>
+	<h1>HTML</h1>
+	<div id="Links">
+		This is a web demo<br /> <a href="hyperlinkdemo.html">WebContent/hyperlinkdemo.html</a><br />
+		<a href="SubFolder/">WebContent/SubFolder/index.html</a><br /> <a
+			href="https://www.google.com" target=_blank>Google.com</a>
+	</div>
+
+	<div id="Lists">
+		<ol type="i" start="10">
+			<li>Kevin</li>
+			<li>Jerry</li>
+			<li>Dexter</li>
+		</ol>
+
+		<dl>
+			<dt>Wet</dt>
+			<dd>Liquids</dd>
+			<dt>Dry</dt>
+			<dd>Not Liquids</dd>
+		</dl>
+
+		<table border="1px solid black">
+			<thead>
+				<tr>
+					<th>EmpId</th>
+					<th>Name</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>1</td>
+					<td>Dave</td>
+				</tr>
+				<tr>
+					<td>2</td>
+					<td>Steve</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+
+	<div id="Forms">
+		<h4>Please fill in the below form:</h4>
+
+		<form action="hyperlinkdemo.html">
+			<input type="text" placeholder="Username" maxlength="50" required
+				autofocus /><br /> <input type="password" placeholder="Password"
+				required maxlength="20" /><br /> <input type="email"
+				placeholder="Email"><br /> <input placeholder="DOB"
+				type="date" /> <br /> <select name="Subject">
+				<option>Java</option>
+				<option>J2ee</option>
+				<option>SQL</option>
+				<option>HTML</option>
+			</select><br />Gender: <br />Male<input type="radio" name="gender"
+				value="Male"> Female<input type="radio" name="gender"
+				value="female"> <br /> <br /> Subscribe to our Newsletter
+			<input type="checkbox" name="enroll" value="sub"> <br />Send
+			me e-mails for deals<input type="checkbox" name="enroll" value="not"><br />
+			<input type="submit">
+
+
+
+		</form>
+	</div>
+</body>
+</html>
