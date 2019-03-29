@@ -1,0 +1,28 @@
+#Content{
+  border-style: dashed;
+  width: 60%;
+}
+
+#Write{
+  height: 50pt
+}
+
+#Controls{
+  margin: 0 0 5px 50px;
+}
+
+#Clock{
+  text-align: right;
+  width: 225px;
+  float: right;
+  margin:auto;
+  padding-bottom: 5px;
+  padding-right: 5px;
+}
+
+footer{
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+}
