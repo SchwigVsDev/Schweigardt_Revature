@@ -1,0 +1,76 @@
+package com.java.controller;
+
+import java.io.*;
+import javax.servlet.*;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.*;
+import java.sql.*;
+
+@WebServlet("/users")
+public class DatabaseAccess extends HttpServlet{
+
+    public void doGet(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+
+        final String JDBC_DRIVER = "oracle.jdbc.driver.OracleDriver";
+        final String DB_URL="YOUR_URL_FROM_AWS";
+
+        //  Database credentials
+        final String USER = "YOUR_USERNAME";
+        final String PASS = "YOUR_PASSWORD";
+
+        // Set response content type
+        response.setContentType("application/xml");
+        PrintWriter out = response.getWriter();
+        String title = "Database Result";
+
+        String docType =
+                "<?xml version=\"1.0\" encoding=\"UTF-8\"?>";
+
+
+        out.println(docType);
+        try {
+            // Register JDBC driver
+            Class.forName(JDBC_DRIVER);
+
+            // Open a connection
+            Connection conn = DriverManager.getConnection(DB_URL, USER, PASS);
+
+            // Execute SQL query
+            Statement stmt = conn.createStatement();
+            String sql;
+            sql = "SELECT EMP_ID, LAST_NAME, FIRST_NAME FROM EMPLOYEE";
+            ResultSet rs = stmt.executeQuery(sql);
+
+            // Extract data from result set
+            out.println("<employees>");
+            while(rs.next()){
+                //Retrieve by column name
+                int id  = rs.getInt("EMP_ID");
+                String lastName = rs.getString("LAST_NAME");
+                String firstName = rs.getString("FIRST_NAME");
+
+                //Display values
+                out.println("<employee>");
+                out.println("<id>" + id + "</id>");
+                out.println("<firstName>" + firstName + "</firstName>");
+                out.println("<lastName>" + lastName + "</lastName>");
+                out.println("</employee>");
+            }
+
+            out.println("</employees>");
+
+
+            // Clean-up environment
+            rs.close();
+            stmt.close();
+            conn.close();
+        } catch(SQLException se) {
+            //Handle errors for JDBC
+            se.printStackTrace();
+        } catch(Exception e) {
+            //Handle errors for Class.forName
+            e.printStackTrace();
+        }
+    }
+}
