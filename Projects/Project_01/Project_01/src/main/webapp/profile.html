@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>User Profile</title>
+<!--Bootsrap 4 CDN-->
+<link rel="stylesheet"
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+	integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+	crossorigin="anonymous">
+
+<!--Fontawesome CDN-->
+<link rel="stylesheet"
+	href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
+	integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
+	crossorigin="anonymous">
+
+<link rel="stylesheet" href="loginStyle.css">
+</head>
+<body>
+	<div class="container">
+		<div class="d-flex justify-content-center h-100">
+			<div class="card">
+				<div class="card-header">
+					<h3>PROFILE</h3>
+					<form id="Form" class="col p-2" method="POST" action="Logout.do">
+						<div class="form-group">
+							<input id="Logout" type="submit" value="Logout"
+								class="btn float-right login_btn">
+						</div>
+					</form>
+				</div>
+				<div id="User" class="card-body"></div>
+				<div class="card-footer">
+					<nav class="nav">
+						<form id="Form" class="p-2" method="POST" action="Ticket.do">
+							<div class="form-group">
+								<input id="Login" type="submit" value="Tickets"
+									class="btn login_btn">
+							</div>
+						</form>
+
+						<form id="Form" class="p-2" method="POST" action="Submit.do">
+							<div class="form-group">
+								<input id="Login" type="submit" value="Submit"
+									class="btn login_btn">
+							</div>
+						</form>
+					</nav>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script src="profile.js"></script>
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+	<script
+		src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+	<script
+		src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+</body>
+</html>
