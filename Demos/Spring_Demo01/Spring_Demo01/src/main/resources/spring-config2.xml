@@ -1,0 +1,12 @@
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.springframework.org/schema/beans
+   http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+    <!-- Beans  -->
+    <bean class="com.java.Simple" id="simple">
+        <constructor-arg value="1"></constructor-arg>
+        <property name="name" value="Jeff"></property>
+    </bean>
+    <bean class="com.java.Simple" id="simple2">
+        <constructor-arg value="5"></constructor-arg>
+        <property name="name" value="Fejj"></property>
+    </bean>
+</beans>

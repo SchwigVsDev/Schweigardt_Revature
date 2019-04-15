@@ -1,0 +1,25 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - Client2",
+            "request": "launch",
+            "mainClass": "com.java.Client2",
+            "projectName": "Spring_Demo01"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - Client",
+            "request": "launch",
+            "mainClass": "com.java.Client",
+            "projectName": "Spring_Demo01"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - App",
+            "request": "launch",
+            "mainClass": "com.java.App",
+            "projectName": "Spring_Demo01"
+        }
+    ]
+}

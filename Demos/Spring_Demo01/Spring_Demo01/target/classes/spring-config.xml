@@ -1,0 +1,35 @@
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+<beans>
+    <bean id="ctrl" class="com.java.controller.MyController">
+        <constructor-arg ref="srvc"></constructor-arg>
+        <property name="id" value="Default-ID"></property>
+    </bean>
+    <bean id="srvc" class="com.java.service.MyService"></bean>
+    <bean id="empl" class="com.java.controller.Employee">
+        <constructor-arg index="0" value="1"></constructor-arg>
+        <constructor-arg index="1" value="Default-Name"></constructor-arg>
+        <property name="projects">
+            <list>
+                <value>Proj 1</value>
+                <value>Proj 2</value>
+            </list>
+        </property>
+        <property name="managerIds">
+            <list>
+                <value>101</value>
+                <value>102</value>
+            </list>
+        </property>
+        <property name="progress">
+            <map>
+                <entry key="11" value="200"></entry>
+                <entry key="21" value="100"></entry>
+            </map>
+        </property>
+        <property name="address">
+            <bean class="com.java.controller.Address">
+                <property name="hNo" value="10"></property>
+            </bean>
+        </property>
+    </bean>
+</beans>
