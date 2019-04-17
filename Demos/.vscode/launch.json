@@ -2,6 +2,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CodeLens (Launch) - Client3",
+            "request": "launch",
+            "mainClass": "com.annotation.Client3",
+            "projectName": "Spring_Demo01"
+        },
+        {
+            "type": "java",
             "name": "CodeLens (Launch) - Client2",
             "request": "launch",
             "mainClass": "com.java.Client2",
