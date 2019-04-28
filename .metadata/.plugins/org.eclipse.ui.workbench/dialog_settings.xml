@@ -1,36 +1,61 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<section name="WorkbenchPreferenceDialogSettings">
-		<item key="DIALOG_X_ORIGIN" value="405"/>
-		<item key="DIALOG_Y_ORIGIN" value="36"/>
+		<item value="405" key="DIALOG_X_ORIGIN"/>
+		<item value="36" key="DIALOG_Y_ORIGIN"/>
 	</section>
 	<section name="org.eclipse.ui.internal.QuickAccess">
-		<item key="dialogHeight" value="691"/>
-		<item key="dialogWidth" value="614"/>
+		<item value="691" key="dialogHeight"/>
+		<item value="614" key="dialogWidth"/>
 		<list key="textEntries">
+			<item value="2"/>
+			<item value="1"/>
+			<item value="1"/>
+			<item value="2"/>
+			<item value="1"/>
 			<item value="1"/>
 			<item value="1"/>
 		</list>
 		<list key="orderedElements">
 			<item value="org.eclipse.egit.ui.StagingView"/>
+			<item value="org.eclipse.epp.mpc.ui.command.showMarketplaceWizard"/>
+			<item value="org.eclipse.wst.server.ui.ServersView"/>
 			<item value="org.eclipse.egit.ui.RepositoriesView"/>
+			<item value="org.eclipse.ui.console.ConsoleView"/>
+			<item value="org.eclipse.ui.browser.view"/>
+			<item value="org.eclipse.pde.ui.DependenciesView"/>
 		</list>
 		<list key="orderedProviders">
+			<item value="org.eclipse.e4.ui.parts"/>
+			<item value="org.eclipse.ui.commands"/>
+			<item value="org.eclipse.e4.ui.parts"/>
+			<item value="org.eclipse.e4.ui.parts"/>
+			<item value="org.eclipse.e4.ui.parts"/>
 			<item value="org.eclipse.e4.ui.parts"/>
 			<item value="org.eclipse.e4.ui.parts"/>
 		</list>
 		<list key="textArray">
 			<item value="stag"/>
+			<item value="staging"/>
+			<item value="market"/>
+			<item value="server"/>
 			<item value="git"/>
+			<item value="git repo"/>
+			<item value="console"/>
+			<item value="web"/>
+			<item value="dependen"/>
 		</list>
 	</section>
 	<section name="NewWizardAction">
-		<item key="NewWizardSelectionPage.STORE_SELECTED_ID" value="org.eclipse.wst.xml.ui.internal.wizards.NewXMLWizard"/>
+		<item value="org.eclipse.m2e.core.wizards.Maven2ProjectWizard" key="NewWizardSelectionPage.STORE_SELECTED_ID"/>
 		<list key="NewWizardSelectionPage.STORE_EXPANDED_CATEGORIES_ID">
-			<item value="org.eclipse.emf.codegen.ecore.ui.wizardCategory"/>
-			<item value="org.eclipse.jst.ws.ui.new"/>
-			<item value="org.eclipse.wst.XMLCategory"/>
-			<item value="org.eclipse.ui.Examples"/>
+			<item value="org.eclipse.m2e"/>
+		</list>
+	</section>
+	<section name="ImportExportAction">
+		<item value="org.eclipse.m2e.core.wizards.Maven2ImportWizard" key="ImportExportPage.STORE_SELECTED_IMPORT_WIZARD_ID"/>
+		<list key="ImportExportPage.STORE_EXPANDED_IMPORT_CATEGORIES">
+			<item value="org.eclipse.m2e"/>
 		</list>
 	</section>
 </section>

@@ -1,0 +1,110 @@
+<?xml version="1.0"?>
+<project
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"
+	xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>com.java</groupId>
+		<artifactId>MicroserviceDemo1</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+	</parent>
+	<artifactId>MicroserviceDemo1.DoctorService</artifactId>
+	<packaging>jar</packaging>
+	<name>MicroserviceDemo1.DoctorService Maven Webapp</name>
+	<url>http://maven.apache.org</url>
+	<dependencies>
+		<!-- https://mvnrepository.com/artifact/postgresql/postgresql -->
+		<!-- https://mvnrepository.com/artifact/org.postgresql/postgresql -->
+		<dependency>
+			<groupId>org.postgresql</groupId>
+			<artifactId>postgresql</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-data-jpa</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-config</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-netflix-hystrix</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+		</dependency>
+	</dependencies>
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+			</plugin>
+			<plugin>
+				<groupId>io.fabric8</groupId>
+				<artifactId>docker-maven-plugin</artifactId>
+				<version>0.21.0</version>
+				<configuration>
+					<!-- linux, docker for windows -->
+					<!-- The docker-maven-plugin uses the Docker remote API so the URL of 
+						your Docker Daemon must somehow be specified. The URL can be specified by 
+						the dockerHost or machine configuration, or by the DOCKER_HOST environment 
+						variable. -->
+					<dockerHost>tcp://192.168.99.100:2376</dockerHost>
+					<verbose>true</verbose>
+					<extensions>true</extensions>
+					<!-- Needed if pushing to docker hub : must store these in local env -->
+					<!-- Moved this in settings.xml inside .m2 folder -->
+					<authConfig>
+						<username>schwig</username>
+						<password>BossFight05!</password>
+					</authConfig>
+					<images>
+						<image>
+							<!-- name of the image -->
+							<name>schwig/doctorservice</name>
+							<build>
+								<!-- docker runs as daemon. CMD shud send all info to docker. Docker 
+									looks in this folder and sub-folder to build -->
+								<dockerFileDir>${project.basedir}/src/main/docker</dockerFileDir>
+								<!-- copies artifact to docker build dir in target -->
+								<assembly>
+									<descriptorRef>artifact</descriptorRef>
+								</assembly>
+								<tags>
+									<tag>latest</tag>
+								</tags>
+
+							</build>
+						</image>
+					</images>
+				</configuration>
+				<executions>
+					<execution>
+						<phase>package</phase>
+						<goals>
+							<goal>build</goal>
+						</goals>
+					</execution>
+					<execution>
+						<id>mydeploy</id>
+						<phase>deploy</phase>
+						<goals>
+							<goal>push</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+			<plugin>
+				<artifactId>maven-deploy-plugin</artifactId>
+				<configuration>
+					<skip>true</skip>
+				</configuration>
+			</plugin>
+		</plugins>
+		<finalName>DoctorService</finalName>
+	</build>
+</project>

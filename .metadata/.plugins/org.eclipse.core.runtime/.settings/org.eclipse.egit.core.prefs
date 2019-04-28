@@ -1,5 +1,5 @@
-GitRepositoriesView.GitDirectories=D\:\\Code Repos\\Schweigardt_Revature\\.git;
-GitRepositoriesView.GitDirectories.relative=.git;
+GitRepositoriesView.GitDirectories=D\:\\Code Repos\\Schweigardt_Revature\\Projects\\Project_02_Spring\\.git;D\:\\Code Repos\\Schweigardt_Revature\\.git;
+GitRepositoriesView.GitDirectories.relative=Projects\\Project_02_Spring\\.git;.git;
 RepositorySearchDialogDeepSearch=true
 RepositorySearchDialogSearchPath=D\:\\Code Repos\\Schweigardt_Revature
 core_autoIgnoreDerivedResources=false

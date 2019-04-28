@@ -1,15 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <workingSetManager>
 <workingSet editPageId="org.eclipse.jdt.internal.ui.DynamicSourcesWorkingSet" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1555339086862_3" label="Java Main Sources" name="Java Main Sources">
+<item elementID="=Project_01/src\/main\/resources" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
 <item elementID="=HibernateOne/src\/main\/java" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
 <item elementID="=HibernateOne/src\/main\/resources" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
 <item elementID="=Project_01/src\/main\/java" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
-<item elementID="=Project_01/src\/main\/resources" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
 </workingSet>
 <workingSet editPageId="org.eclipse.jdt.internal.ui.DynamicSourcesWorkingSet" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1555339086870_4" label="Java Test Sources" name="Java Test Sources">
-<item elementID="=HibernateOne/src\/test\/java" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
-<item elementID="=HibernateOne/src\/test\/resources" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
 <item elementID="=Project_01/src\/test\/java" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=HibernateOne/src\/test\/resources" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=HibernateOne/src\/test\/java" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+</workingSet>
+<workingSet editPageId="org.eclipse.jdt.internal.ui.DynamicSourcesWorkingSet" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1555986895158_3" label="Java Main Sources" name="main">
+<item elementID="=FaceYourBookSpace/src\/main\/java" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=FaceYourBookSpace/src\/main\/resources" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=FaceYourBookSpace/target\/generated-sources\/annotations" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+</workingSet>
+<workingSet editPageId="org.eclipse.jdt.internal.ui.DynamicSourcesWorkingSet" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1555986895164_4" label="Java Test Sources" name="test">
+<item elementID="=FaceYourBookSpace/target\/generated-test-sources\/test-annotations" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+</workingSet>
+<workingSet editPageId="org.eclipse.ui.resourceWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1556215570871_5" label="MicroserviceDemo1" name="MicroserviceDemo1">
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/MicroserviceDemo1.ApiGateway" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/MicroserviceDemo1.ConfigServer" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/MicroserviceDemo1.DoctorService" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/MicroserviceDemo1.AppointmentService" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/MicroserviceDemo1" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/MicroserviceDemo1.PatientService" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/MicroserviceDemo1.EurekaServer" type="4"/>
 </workingSet>
 <workingSet aggregate="true" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1554493187304_2" label="Window Working Set" name="Aggregate for window 1554493187304"/>
 </workingSetManager>

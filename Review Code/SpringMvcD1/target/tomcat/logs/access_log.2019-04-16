@@ -1,0 +1,2 @@
+0:0:0:0:0:0:0:1 - - [16/Apr/2019:16:57:34 -0500] "GET /SpringMvcD1/login.do HTTP/1.1" 404 949 http-bio-9000-exec-1 1236
+0:0:0:0:0:0:0:1 - - [16/Apr/2019:16:57:34 -0500] "GET /favicon.ico HTTP/1.1" 404 - http-bio-9000-exec-2 0
